@@ -6,11 +6,13 @@ import About from "./Components/About/About";
 import CoreValues from "./Components/About/CoreValues";
 import WeAreHere from "./Components/About/WeAreHere";
 import UnderConstruction from "./Components/UnderConstruction";
+import Advcount from "./Components/Advertisement/Advcount";
+import CustomerFirstSection from "./Components/CustomerFirstSection/CustomerFirstSection";
 export default function Home() {
   const maintinanmode = true;
   return (
     <>
-    {maintinanmode &&<UnderConstruction/>}
+    {/* {maintinanmode &&<UnderConstruction/>} */}
     <main className="min-h-screen w-screen ">
       <Slider />
       <div className="justify-items-center lg:mx-32 mx-4 items-center -mt-20 drop-shadow-lg bg-zinc-50 rounded grid lg:grid-cols-4 grid-flow-row z-40">
@@ -53,7 +55,9 @@ export default function Home() {
 
       <About/>
       <CoreValues/>
+      <Advcount/>
       <WeAreHere/>
+      <CustomerFirstSection/>
     </main></>
   );
 }

@@ -4,9 +4,11 @@ import Image from "next/image";
 import YouTube from "react-youtube";
 import { FaPlay } from "react-icons/fa";
 import { IoMdCloseCircle } from "react-icons/io";
+import { AiOutlineLoading3Quarters } from "react-icons/ai"; // Import loader icon
 
 function About() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // State to track loading status
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -14,6 +16,11 @@ function About() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setIsLoading(true); // Reset loading state when modal is closed
+  };
+
+  const onVideoReady = () => {
+    setIsLoading(false); // Set loading to false when video is ready
   };
 
   const opts = {
@@ -75,7 +82,15 @@ function About() {
             >
               <IoMdCloseCircle className="size-6 z-50" />
             </button>
-            <div className="p-6 z-10">
+
+            {/* Loader shows while video is loading */}
+            {isLoading && (
+              <div className="flex items-center justify-center  w-full h-full lg:w-[640px] lg:h-[390px]">
+                <AiOutlineLoading3Quarters className="animate-spin text-4xl text-blue-600" />
+              </div>
+            )}
+
+            <div className={`p-6 z-10 ${isLoading ? "hidden" : "block"}`}>
               <YouTube
                 videoId="mdERtIOmhGw"
                 opts={{
@@ -84,6 +99,7 @@ function About() {
                   height: "100%",
                 }}
                 className="w-full h-full lg:w-[640px] lg:h-[390px]"
+                onReady={onVideoReady} // Video ready event
               />
             </div>
           </div>
