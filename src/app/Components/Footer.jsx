@@ -8,22 +8,23 @@ import {
 } from "react-icons/fa";
 import footerlogo from "../assets/footerlogo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <div>
       {/* Header Section */}
       <div className="flex flex-col md:flex-row justify-start w-full">
-        <div className="bg-blue-900 p-1 w-full md:w-1/4 md:pl-32 flex justify-center md:justify-start">
+        <div className="bg-blue-900 p-2 w-full md:w-1/4 md:pl-32 flex justify-center md:justify-start">
           <Image width={200} height={210} src={footerlogo} alt="Footer Logo" />
         </div>
         <div className="bg-teal-400 py-4 w-full md:w-3/4 md:px-20 md:pr-32 flex flex-col md:flex-row items-center justify-between">
           <h1 className="text-xl md:text-2xl font-bold text-white text-center md:text-left mb-2 md:mb-0">
             Turn your search into success
           </h1>
-          <button className="bg-white text-teal-500 font-semibold py-2 px-4 rounded-full hover:bg-gray-200 mt-2 md:mt-0">
+          <Link href={'/Contact'} className="bg-white text-teal-500 font-semibold py-2 px-4 rounded-full hover:bg-gray-200 mt-2 md:mt-0">
             WORK WITH US
-          </button>
+          </Link>
         </div>
       </div>
 

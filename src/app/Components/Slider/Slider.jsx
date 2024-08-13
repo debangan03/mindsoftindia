@@ -1,9 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import "./Slider.css"; // Import custom styles
+import { useRouter } from "next/navigation";
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const router = useRouter();
 
   const slides = [
     {
@@ -85,10 +87,10 @@ const Slider = () => {
                     : "translate-x-full opacity-0"
                 }`}
               >
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
+                <button onClick={()=>router.push('/Contact')} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
                   WORK WITH US
                 </button>
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
+                <button onClick={()=>router.push('/About')} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
                   LEARN MORE
                 </button>
               </div>

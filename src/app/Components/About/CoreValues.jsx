@@ -6,6 +6,7 @@ import {LuAlarmClock} from 'react-icons/lu'
 import { GiStopwatch } from "react-icons/gi";
 import {GoLaw } from 'react-icons/go'
 import { MdSupportAgent } from "react-icons/md";
+import Link from "next/link";
 
 function CoreValues() {
   return (
@@ -28,12 +29,12 @@ function CoreValues() {
           firm. Our clientele includes Fortune 500 companies & top MNCs.
         </p>
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-          <button className="font-semibold bg-blue-500 text-white py-3 px-6 rounded-full hover:bg-white hover:text-blue-500 transition-colors duration-500">
+          <Link href={'/Contact'}  className="font-semibold bg-blue-500 text-white py-3 px-6 rounded-full hover:bg-white hover:text-blue-500 transition-colors duration-500">
             Work with us
-          </button>
-          <button className="font-semibold bg-white text-blue-500 py-3 px-6 rounded-full hover:bg-blue-500 hover:text-white transition-colors duration-500">
+          </Link>
+          <Link href={'/About'} className="font-semibold bg-white text-blue-500 py-3 px-6 rounded-full hover:bg-blue-500 hover:text-white transition-colors duration-500">
             Learn more
-          </button>
+          </Link>
         </div>
       </div>
       <div className="w-full lg:w-1/2 grid  grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center items-center">
