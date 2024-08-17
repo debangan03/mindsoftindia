@@ -16,7 +16,7 @@ function Page() {
     <div className="min-h-screen flex flex-col items-center">
       <div className="bg-indigo-800/40 relative h-48 flex justify-center items-center w-screen">
         <img
-          src="https://img.freepik.com/free-photo/friendly-partners-handshaking-group-meeting-thanking-successful-teamwork_1163-4691.jpg?w=996&t=st=1723492657~exp=1723493257~hmac=2ebc570ad677831f1f28e5847d86d033dd6e600c3890a7aa920bd93ee1a0853c"
+          src="/aboutbg.jpg"
           alt="banner"
           className="absolute top-0 -z-30 left-0 right-0 w-screen h-48 object-cover object-center"
         />

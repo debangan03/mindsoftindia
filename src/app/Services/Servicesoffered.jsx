@@ -17,7 +17,7 @@ export default function ServicesSection() {
       </h2>
       <div className="max-w-screen-lg mx-auto grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
         {/* Executive Search */}
-        <div className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
+        <Link href={'/1'} className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
           <FaSearch className="text-blue-600 text-3xl" />
           <div>
             <h3 className="text-xl font-semibold mb-2">Executive Search</h3>
@@ -26,10 +26,10 @@ export default function ServicesSection() {
               precision and insight.
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* Training & Development */}
-        <div className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
+        <Link href={'/2'} className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
           <FaChalkboardTeacher className="text-blue-600 text-3xl" />
           <div>
             <h3 className="text-xl font-semibold mb-2">Training & Development</h3>
@@ -38,10 +38,10 @@ export default function ServicesSection() {
               training programs and development opportunities.
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* Permanent Staffing */}
-        <div className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
+        <Link href={'/3'} className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
           <FaRegHandshake className="text-blue-600 text-3xl" />
           <div>
             <h3 className="text-xl font-semibold mb-2">Permanent Staffing</h3>
@@ -50,10 +50,10 @@ export default function ServicesSection() {
               strong and stable workforce.
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* Contract Staffing */}
-        <div className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
+        <Link href={'/4'} className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
           <FaBriefcase className="text-blue-600 text-3xl" />
           <div>
             <h3 className="text-xl font-semibold mb-2">Contract Staffing</h3>
@@ -62,10 +62,10 @@ export default function ServicesSection() {
               professionals on a contract basis.
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* RPO */}
-        <div className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
+        <Link href={'/5'} className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
           <FaRegListAlt className="text-blue-600 text-3xl" />
           <div>
             <h3 className="text-xl font-semibold mb-2">RPO (Recruitment Process Outsourcing)</h3>
@@ -74,7 +74,7 @@ export default function ServicesSection() {
               efficiency and effectiveness.
             </p>
           </div>
-        </div>
+        </Link>
 
         <Link
           className="col-span-1 md:col-span-2 lg:col-span-3 mx-auto text-center bg-blue-900 text-white text-lg p-3 rounded"

@@ -6,15 +6,15 @@ function Topbanner() {
   return (
     <header>
     <div className="h-10 bg-[#162440] text-sm tracking-wide text-white p-2 lg:flex hidden justify-between items-center px-32">
-      <div className="flex justify-center items-center space-x-2">
+      <a href="mailto:info@mindsoftindia.com" className="flex justify-center items-center space-x-2">
         <MdEmail className="size-5" />
         <span>info@mindsoftindia.com</span>
-      </div>
+      </a>
       <div className="flex justify-center items-center space-x-2 icongrp">
-        <FaLinkedin className="size-5" />
-        <FaFacebookF className="size-5" />
-        <FaTwitter className="size-5" />
-        <FaYoutube className="size-5" />
+        <a href="#"><FaLinkedin className="size-5 cursor-pointer" /></a>
+        <a href="#"><FaFacebookF className="size-5 cursor-pointer" /></a>
+        <a href="#"><FaTwitter className="size-5 cursor-pointer" /></a>
+        <a href="#"><FaYoutube className="size-5 cursor-pointer" /></a>
       </div>
     </div>
   

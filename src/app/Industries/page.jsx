@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function page() {
@@ -58,16 +59,17 @@ function page() {
           Talk To An Expert
         </button>
       </div>
-      <div className="p-6  ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="p-4 mx-auto max-w-7xl ">
+        <div className="flex flex-wrap justify-center items-center  ">
           {sectors.map((sector, index) => (
-            <div
+            <Link
+              href={`/${index + 6}`}
               key={index}
-              className="bg-white hover:scale-95 duration-500 cursor-pointer rounded-lg shadow-md p-6 flex flex-col items-center"
+              className="bg-gradient-to-br from-blue-500/20 hover:scale-95 w-80 h-36 duration-500 cursor-pointer rounded-lg shadow-md p-6 m-4 flex flex-col items-center"
             >
               <h3 className="text-xl font-semibold mb-3">{sector.title}</h3>
               <p className="text-gray-600 text-center">{sector.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -20,18 +20,18 @@ function Navbar() {
   };
 
   return (
-    <div>
+    <div className="sticky -top-10 border-b z-50 shadow-lg">
       <Topbanner />
 
       {/* Small Screen Navigation */}
-      <nav className="md:hidden flex justify-between items-center px-4 py-2 sticky top-2 bg-white z-50">
-        <div className="cursor-pointer" onClick={() => router.push('/')}>
+      <nav className="md:hidden flex justify-between items-center px-4 py-2 sticky top-2 bg-white z-[999] ">
+        <div className="cursor-pointer bg-white" onClick={() => router.push("/")}>
           <Image src={logo} width={150} height={40} alt="Logo" />
         </div>
         <CgMenuGridR size={30} onClick={handleMenuToggle} />
         {isMenuOpen && (
           <ul className="absolute left-0 top-16 w-full bg-white border-t border-gray-200 z-50">
-            <Link href={"/"}>
+            <Link href="/">
               <li className="cursor-pointer font-semibold hover:text-blue-600 transition-colors duration-300 py-3 px-4">
                 Home
               </li>
@@ -50,19 +50,29 @@ function Navbar() {
               </div>
               {dropdown === "Services" && (
                 <ul className="bg-white border-t border-gray-200">
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">
-                    Executive Search
-                  </li>
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">
-                    Training & Development
-                  </li>
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">
-                    Permanent Staffing
-                  </li>
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">
-                    Contract Staffing
-                  </li>
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">RPO</li>
+                  <Link href="/1">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      Executive Search
+                    </li>
+                  </Link>
+                  <Link href="/2">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      Training & Development
+                    </li>
+                  </Link>
+                  <Link href="/3">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      Permanent Staffing
+                    </li>
+                  </Link>
+                  <Link href="/4">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      Contract Staffing
+                    </li>
+                  </Link>
+                  <Link href="/5">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">RPO</li>
+                  </Link>
                 </ul>
               )}
             </li>
@@ -80,14 +90,31 @@ function Navbar() {
               </div>
               {dropdown === "Industries" && (
                 <ul className="bg-white border-t border-gray-200">
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">
-                    Information Technology
-                  </li>
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">Telecom</li>
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">Retail</li>
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">
-                    BPO/ITES
-                  </li>
+                  <Link href="/6">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      Information Technology
+                    </li>
+                  </Link>
+                  <Link href="/7">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      Telecom
+                    </li>
+                  </Link>
+                  <Link href="/8">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      Telecom
+                    </li>
+                  </Link>
+                  <Link href="/9">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      Retail
+                    </li>
+                  </Link>
+                  <Link href="/10">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      BPO/ITES
+                    </li>
+                  </Link>
                 </ul>
               )}
             </li>
@@ -105,21 +132,33 @@ function Navbar() {
               </div>
               {dropdown === "about" && (
                 <ul className="bg-white border-t border-gray-200">
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">About us</li>
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">
-                    Why Mindsoft
-                  </li>
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">Blog</li>
-                  <li className="p-2 px-4 hover:bg-gray-100 text-sm">e-Book</li>
+                  <Link href="/about">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      About us
+                    </li>
+                  </Link>
+                  <Link href="/About/Why-Mindsoft">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      Why Mindsoft
+                    </li>
+                  </Link>
+                  <Link href="/blog">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">Blog</li>
+                  </Link>
+                  <Link href="/ebook">
+                    <li className="p-2 px-4 hover:bg-gray-100 text-sm">
+                      e-Book
+                    </li>
+                  </Link>
                 </ul>
               )}
             </li>
-            <Link href={"/Jobs"}>
+            <Link href="/Jobs">
               <li className="cursor-pointer font-semibold hover:text-blue-600 transition-colors duration-300 py-3 px-4">
                 Jobs
               </li>
             </Link>
-            <Link href={"/Contact"}>
+            <Link href="/Contact">
               <li className="cursor-pointer font-semibold hover:text-blue-600 transition-colors duration-300 py-3 px-4">
                 Contact
               </li>
@@ -130,11 +169,11 @@ function Navbar() {
 
       {/* Large Screen Navigation */}
       <nav className="hidden md:flex justify-between items-center px-32 py-2 sticky top-2 bg-white z-50">
-        <div className="cursor-pointer" onClick={() => router.push('/')}>
+        <div className="cursor-pointer bg-white" onClick={() => router.push("/")}>
           <Image src={logo} width={150} height={40} alt="Logo" />
         </div>
         <ul className="flex items-center space-x-10">
-          <Link href={"/"}>
+          <Link href="/">
             <li className="cursor-pointer font-semibold hover:text-blue-600 transition-colors duration-300">
               Home
             </li>
@@ -157,24 +196,39 @@ function Navbar() {
                 className="absolute top-full left-0 bg-white border border-gray-200 shadow-lg w-48 mt-2 z-10"
                 onMouseLeave={() => handleDropdownToggle("")}
               >
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">
-                  Executive Search
-                </li>
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">
-                  Training & Development
-                </li>
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">
-                  Permanent Staffing
-                </li>
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">
-                  Contract Staffing
-                </li>
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">RPO</li>
+                <Link href="/1">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    Executive Search
+                  </li>
+                </Link>
+                <Link href="/2">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    Training & Development
+                  </li>
+                </Link>
+                <Link href="/3">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    Permanent Staffing
+                  </li>
+                </Link>
+                <Link href="/4">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    Contract Staffing
+                  </li>
+                </Link>
+                <Link href="/5">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    RPO
+                  </li>
+                </Link>
               </ul>
             )}
           </li>
           <li className="relative flex items-center space-x-2">
-            <span className="cursor-pointer font-semibold hover:text-blue-600 transition-colors duration-300">
+            <span
+              onClick={() => router.push("/Industries")}
+              className="cursor-pointer font-semibold hover:text-blue-600 transition-colors duration-300"
+            >
               Industries
             </span>
             <IoIosArrowDown
@@ -188,14 +242,32 @@ function Navbar() {
                 className="absolute top-full left-0 bg-white border border-gray-200 shadow-lg w-48 mt-2 z-10"
                 onMouseLeave={() => handleDropdownToggle("")}
               >
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">
-                  Information Technology
-                </li>
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">Telecom</li>
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">Retail</li>
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">
-                  BPO/ITES
-                </li>
+                <Link href="/6">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    Information Technology
+                  </li>
+                </Link>
+                <Link href="/7">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    Telecom
+                  </li>
+                </Link>
+                <Link href="/8">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    BFSI
+                  </li>
+                </Link>
+
+                <Link href="/9">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    Retail
+                  </li>
+                </Link>
+                <Link href="/10">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    BPO/ITES
+                  </li>
+                </Link>
               </ul>
             )}
           </li>
@@ -217,23 +289,35 @@ function Navbar() {
                 className="absolute top-full left-0 bg-white border border-gray-200 shadow-lg w-48 mt-2 z-10"
                 onMouseLeave={() => handleDropdownToggle("")}
               >
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">
-                  About us
-                </li>
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">
-                  Why Mindsoft
-                </li>
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">Blog</li>
-                <li className="p-2 hover:bg-gray-100 font-regular text-sm">e-Book</li>
+                <Link href="/About">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    About us
+                  </li>
+                </Link>
+                <Link href="/About/Why-Mindsoft">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    Why Mindsoft
+                  </li>
+                </Link>
+                <Link href="/blog">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    Blog
+                  </li>
+                </Link>
+                <Link href="/About/Ebooks">
+                  <li className="p-2 hover:bg-gray-100 font-regular text-sm">
+                    e-Book
+                  </li>
+                </Link>
               </ul>
             )}
           </li>
-          <Link href={"/Jobs"}>
+          <Link href="/Jobs">
             <li className="cursor-pointer font-semibold hover:text-blue-600 transition-colors duration-300">
               Jobs
             </li>
           </Link>
-          <Link href={"/Contact"}>
+          <Link href="/Contact">
             <li className="cursor-pointer font-semibold hover:text-blue-600 transition-colors duration-300">
               Contact
             </li>
